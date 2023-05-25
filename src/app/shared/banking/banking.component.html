@@ -1,0 +1,17 @@
+<p>
+    <strong>Olá Guilherme olveira</strong>
+    ag: 999, co: 9999-9
+</p>
+
+<p>
+    Poupança: <span>{{getPoupanca | currency : 'BRL'}}</span>
+    <input type="text" #sacar placeholder="sacar">
+    <button (click)="sacarValor(sacar.value)">Sacar</button>
+</p>
+
+<p>
+    Carteira: <span>{{getCarteira | currency : 'BRL'}}</span>
+
+    <input type="text" #depositar placeholder="Depositar">
+    <button (click)="DepositarValor(depositar.value)">Depositar</button>
+</p>
