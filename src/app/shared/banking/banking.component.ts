@@ -18,19 +18,24 @@ export class BankingComponent {
   }
 
 
-  sacarValor(valor: string): number {
+  sacarValor(valor: string): number | undefined {
     const sacar = Number(valor);
-    console.log(sacar);
+    if (isNaN(sacar) || this.poupanca < sacar) {
+      return;
+    }
 
-    return sacar;
+    this.poupanca -= sacar;
+
+    return this.carteira += sacar;
   }
 
-  DepositarValor(valor: string): number {
-    const sacar = Number(valor);
-    console.log(sacar);
+  DepositarValor(valor: string): number | undefined {
+    const depositar = Number(valor);
+    if (isNaN(depositar) || this.carteira < depositar) {
+      return;
+    }
 
-    return sacar;
+    this.carteira -= depositar;
+    return this.poupanca += depositar;
   }
-
-
 }
