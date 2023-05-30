@@ -4,14 +4,16 @@
 </p>
 
 <p>
-    Poupança: <span>{{getPoupanca | currency : 'BRL'}}</span>
-    <input type="text" #sacar placeholder="sacar">
-    <button (click)="sacarValor(sacar.value)">Sacar</button>
+    Poupança: <span id="get-poupanca">{{getPoupanca | currency : 'BRL'}}</span>
+    <input type="text" id='input-sacar' #sacar placeholder="sacar">
+    <button id='sacar' (click)="sacarValor(sacar.value)">Sacar</button>
 </p>
 
 <p>
     Carteira: <span>{{getCarteira | currency : 'BRL'}}</span>
 
-    <input type="text" #depositar placeholder="Depositar">
-    <button (click)="DepositarValor(depositar.value)">Depositar</button>
+    <input type="text" id='input-depositar' #depositar placeholder="Depositar">
+    <button id="depositar" (click)="DepositarValor(depositar.value)">Depositar</button>
 </p>
+
+<app-list></app-list>
