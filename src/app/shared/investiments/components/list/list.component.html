@@ -1,8 +1,8 @@
-<hr>
+<hr />
 <h1>Investimentos</h1>
 
 <ul>
-    <li *ngFor="let invest of investiments" class="list-invest">
-        {{invest.name}} - {{invest.value |currency : 'BRL'}}
-    </li>
+  <li *ngFor="let investiment of investiments" class="list-itens">
+    {{ investiment.name }} | {{ investiment.value }}
+  </li>
 </ul>

@@ -1,4 +1,4 @@
 export interface Investiments {
-    name: string;
-    value: number;
+  name: string;
+  value: number;
 }
